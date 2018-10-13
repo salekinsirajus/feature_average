@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+   <body>
+      <h3> Result </h3>  
+
+      <p>GitHub API returned {{ result['entry_received']}} entries</p>
+      <p>We removed {{ result['entry_parged'] }} entries because
+         those PR took very short amount of time from opening the issue to
+         merging the code.
+        (the cutoff is less than 15 minutes, so the code change are
+         likely to be notsubstantial)</p>
+
+     <p> The remaining {{ result['entry_used'] }} entries were used 
+         in crunching data </p>
+     <p> Our research suggests that, on average, "{{ result['feature'] }}"
+         took {{ result['average_time'] }} {{ result['time_unit'] }}(s) 
+         to finish.
+    </p>
+      
+   </body>
+</html>
